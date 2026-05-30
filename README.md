@@ -47,25 +47,6 @@ only need to set up the `GOOGLE_API_KEY`.
 
 Our shared context experiments use stories from
 [Tell Me A Story](https://github.com/google-deepmind/tell_me_a_story) Dataset.
-You can get the data using the following commands (**Remember to run these from
-the head directory of this repo**):
-
-```bash
-mkdir -p data/tell_me_a_story
-cd data/tell_me_a_story
-wget https://storage.googleapis.com/tell-me-a-story/tell-me-a-story-train_encrypted.jsonl
-wget https://storage.googleapis.com/tell-me-a-story/tell-me-a-story-validation_encrypted.jsonl
-wget https://storage.googleapis.com/tell-me-a-story/tell-me-a-story-test_encrypted.jsonl
-wget https://github.com/google-deepmind/tell_me_a_story/raw/refs/heads/main/keys.zip
-unzip keys.zip
-```
-
-The dataset is encrypted and you will need to decrypt it for using with our
-environments, by following the instructions in the original repository.
-
-Note that the decrypted stories should *not* be posted in plaintext online, or
-passed to an API that may result in them being used for training models, in
-order to avoid contaminating the dataset.
 
 ## Running Experiments
 
